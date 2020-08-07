@@ -7,6 +7,10 @@ pipeline {
                         bat "mvn clean compile"
                 }
             }
+{
+                withMaven(maven : 'ap.9'){
+                        bat "mvn clean compile"
+                }
         }
         stage('Test'){
             steps {
